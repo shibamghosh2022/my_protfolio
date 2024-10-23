@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Protfolio</title>
+    <link rel="StyleSheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header-text">
+                <h1>Hey, I’m <span>Shibam Ghosh</span>, <br>
+                    With a focus on practical experience<br>
+                    and a commitment to justice, <br>
+                    I aim to contribute effectively <br>
+                    to the legal profession
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------about------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="about.jpg" height="500px">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>I’m Shibam Ghosh, a law student at Calcutta University with a strong interest in constitutional
+                        law, corporate law, and human rights. Throughout my academic journey, I’ve developed a passion
+                        for understanding the legal system and how it influences society.
+
+                        I am always eager to take on new challenges and deepen my knowledge in the field, with the goal
+                        of making a meaningful impact in the legal world.
+
+                        Outside of academics, I enjoy playing football and cricket which keeps me balanced and
+                        motivated.
+
+                        Feel free to connect with me to discuss law or collaborations.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>Legal research and analysis</li>
+                            <li>Strong written and oral communication</li>
+                            <li>Knowledge of legal databases (e.g., Manupatra, SCC Online)</li>
+                            <li>Drafting legal documents</li>
+                            <li>Time management and organizational skills</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Intra-College Moot Court Competition <br>
+                                    Calcutta University <br>
+                                    Date : 8th June 2024 </span></li>
+                            <li>Participated in moot court proceedings simulating real legal cases.</li>
+                            <li>Drafted legal memorials and presented oral arguments.</li>
+                            <li> Developed strong research, legal writing, and public speaking skills.</li>
+                            <li>Collaborated with a team to analyze legal issues and form coherent arguments.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-Present</span><br> BA LLB at L.J.D. Law College, (Calcutta University)</li>
+                            <li><span>2022</span><br> 10+2 from from Kalyani Public School(CBSE)</li>
+                            <li><span>2020</span><br> Class-10th from The Central Modern School(ICSE)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------- about--------------------- -->
+
+
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> shibamghoshbst@gmail.com </p>
+                    <p><i class="fa-solid fa-phone"></i> +91-74789-37113</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/shibam-ghosh-6b8540253/" target="_main"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/shibaaaamm/" target="_main"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/champ.shibam?mibextid=ZbWKwL" target="_main"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://wa.me/917478937113" target="_main"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <a href="cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Shibam Ghosh. Made with <i class="fas fa-heart"></i> by Rupam Ghosh</p>
+        </div>
+
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzXQ_z1WuqInBf3rUFP139bi4ZzelTMX268h7Ncyck-Z7PulbnvL1eAujURvrMvuTQJ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully."
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
